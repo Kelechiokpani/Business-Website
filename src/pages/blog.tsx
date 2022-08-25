@@ -1,15 +1,15 @@
 import React from 'react';
+import Blog_Hero from '@/components/Blog/Blog_Hero';
 import { Footer } from '@/components/Footer';
 import SEO from '@/components/SEO';
-import ContactForm from "@/components/contact/Contact";
-import Contact_Hero from "@/components/contact/Contact_Hero";
+import {Blogger} from "@/components/Blog/blog";
 
-export default function ContactUs() {
+export default function NewsBlog() {
     return (
         <>
             <SEO />
-            <Contact_Hero/>
-            <ContactForm/>
+            <Blog_Hero />
+            <Blogger/>
             {/*<main className='mx-auto max-w-screen-xl px-6 sm:px-8'>*/}
             {/*    <div className='mt-16 space-y-20'>*/}
             {/*        <Marketers />*/}

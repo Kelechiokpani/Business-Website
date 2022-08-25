@@ -1,23 +1,26 @@
 import React from 'react';
-import Hero from '@/components/Hero';
 import { Footer } from '@/components/Footer';
-import { FeaturedJobs } from '@/components/FeaturedJobs';
-import { LatestJobs } from '@/components/LatestJobs';
-import { TopCompanies } from '@/components/TopCompanies';
+import { Marketers } from '@/components/home/Marketers';
 import SEO from '@/components/SEO';
+import Home_Hero from "@/components/home/Home_Hero";
+import Content from "@/components/home/offer";
+import {Model_Content} from "@/components/home/model";
+import Banner from "@/components/home/banner";
 
 export default function Home() {
   return (
     <>
       <SEO />
-      <Hero />
-      <main className='mx-auto max-w-screen-xl px-6 sm:px-8'>
+      <Home_Hero/>
+      <main className='mx-auto max-w-screen-xl px-4 sm:px-5'>
         <div className='mt-16 space-y-20'>
-          <FeaturedJobs />
-          <LatestJobs />
-          <TopCompanies />
+          <Marketers />
+            <Content/>
         </div>
       </main>
+
+        <Banner/>
+        <Model_Content/>
       <Footer />
     </>
   );

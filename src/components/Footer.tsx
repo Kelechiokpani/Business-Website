@@ -1,63 +1,68 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import jama from "../../public/img/jama.png"
 
 
 const footerNav = {
   Company: [
     {
       title: "About Us",
-      href: "/#",
+      href: "/about",
     },
-    { title: "Contact Us", href: "/#" },
-    { title: "Newsroom", href: "/#" },
-    { title: "FAQ", href: "/#" },
+    { title: "Contact Us", href: "/contactUs" },
+    { title: "Newsroom", href: "/blog" },
+    { title: "Services", href: "/services" },
   ],
-  "Job Seeker": [
-    {
-      title: "Jobs by Specialisation",
-      href: "/#",
-    },
-    { title: "Jobs by Location", href: "/#" },
-    { title: "Jobs by Type", href: "/#" },
-    { title: "Jobs by Experience Level", href: "/#" },
-    { title: "Companies", href: "/#" },
-    { title: "Advice", href: "/#" },
+  "Services": [
+
+    { title: "Dedicated Teams", href: "/" },
+    { title: "Product Strategy", href: "/" },
+    { title: "Architecture", href: "/" },
+    { title: "UX / UI Design", href: "/" },
+    { title: "App Developers", href: "/" },
+    { title: "Web Development", href: "/" },
+    { title: "Custom Software Development", href: "/" },
   ],
-  Employers: [
+
+  Contacts: [
+
+    { title: "+2348157290561", href: "https://wa.me/message/5U44S3D7LA46M1", },
+    { title:  "+2348106720418",  href: "https://wa.me/message/WIKU3YAIUTGWI1",  },
+
     {
-      title: "Start Hiring Today",
-      href: "/#",
+      title: "info@verydeeptech.com",
+      href: "https://info@verydeeptech.com",
     },
-    { title: "Headhunting Services", href: "/#" },
+    {
+      title: "support@verydeeptech.com",
+      href: "https://support@verydeeptech.com",
+    },
   ],
 };
 
 const SocialLinks = [
   {
     title: "Instagram",
-    link: "https://instagram.com/",
+    link: "https://www.instagram.com/deeptechnigeria/",
     Icon: <InstagramIcon height={30} width={30} />,
   },
   {
     title: "Facebook",
-    link: "https://facebook.com/",
+    link: "https://web.facebook.com/verydeeptech",
     Icon: <FacebookIcon height={30} width={30} />,
   },
   {
     title: "Tiktok",
-    link: "https://tiktok.com/",
+    link: "/",
     Icon: <TiktokIcon height={30} width={30} />,
   },
   {
     title: "LinkedIn",
-    link: "https://linkedin.com/",
+    link: "https://www.linkedin.com/company/verydeeptech",
     Icon: <LinkedInIcon height={30} width={30} />,
   },
   {
     title: "Youtube",
-    link: "https://youtube.com/",
+    link: "/",
     Icon: <YoutubeIcon height={30} width={30} />,
   },
 ];
@@ -95,7 +100,7 @@ export const Footer = () => {
             </span>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/company/verydeeptech"
               rel="noreferrer"
               target="_blank"
               className="mt-4 max-w-min"
@@ -103,6 +108,7 @@ export const Footer = () => {
 
               <LinkedInFullIcon height={25} />
             </a>
+            <p className="text-sm  text-gray-900 dark:text-gray-100 mt-5">No.33 Democracy Crescent, Gaduwa Estate Gudu Abuja FCT Nigeria</p>
 
           </div>
 
@@ -116,7 +122,8 @@ export const Footer = () => {
                   {items.map((item) => (
                     <li key={item.title}>
                       <Link href={item.href}>
-                        <a className="transition-all duration-150 hover:text-indigo-800 hover:underline dark:text-gray-300 dark:hover:text-white">
+                        <a target='_blank' rel='whatsApp'
+                            className="transition-all duration-150 hover:text-indigo-800 hover:underline dark:text-gray-300 dark:hover:text-white">
                           {item.title}
                         </a>
                       </Link>
@@ -138,20 +145,21 @@ export const Footer = () => {
                 className="h-12"
               />
             </a>
-            <a href="#">
+            <a href="https://play.google.com/store/apps/details?id=com.dtworld"   target="_blank" rel="googlePlayStore noreferrer">
               <img
                 src="/img/google_play_download_button.svg"
                 alt="download app"
                 className="h-12"
+
               />
             </a>
-            <a href="#">
-              <img
-                src="/img/app_gallery_download_button.svg"
-                alt="download app"
-                className="h-12"
-              />
-            </a>
+            {/*<a href="#">*/}
+            {/*  <img*/}
+            {/*    src="/img/app_gallery_download_button.svg"*/}
+            {/*    alt="download app"*/}
+            {/*    className="h-12"*/}
+            {/*  />*/}
+            {/*</a>*/}
           </div>
         </div>
 

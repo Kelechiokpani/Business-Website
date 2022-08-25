@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { Button, IconButton } from "./Button";
+import { Button, IconButton } from "../Button";
 import { Transition } from "@headlessui/react";
 
 const Hero = () => {
@@ -8,11 +7,10 @@ const Hero = () => {
   return (
     <>
       <div className="relative h-[640px] w-full bg-red-500/20 sm:h-[55vh] md:h-[640px]">
-        <Image
-          src="/img/corporate.jpg"
-          alt="corporate"
-          layout="fill"
-          objectFit="cover"
+        <img
+            src="https://dtworldserver.verydeeptech.com/file/6305d938c0c3f66c6ee23721?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            className="absolute inset-0 object-cover w-full h-full "
+            alt=""
         />
         <div className="absolute inset-0 bg-neutral-900/70">
           <div className="mx-auto max-w-screen-lg">

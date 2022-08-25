@@ -8,10 +8,11 @@ import Logo from './Logo';
 import { AuthenticationDialog } from './AuthenticationDialog';
 
 export const Header: React.FC = () => {
-  const [showAuth, setShowAuth] = useState(true);
+  const [showAuth, setShowAuth] = useState(false);
   return (
     <>
-      <header className='sticky inset-x-0 top-0 z-20 flex items-center justify-between bg-white py-2 px-2 shadow-lg dark:bg-slate-900/75 sm:py-3 sm:px-8'>
+
+      <header className=' md:flex w-full h-full sticky inset-x-0 top-0 z-20 flex items-center justify-between bg-white py-2 px-2 shadow-lg dark:bg-slate-900/75 sm:py-3 sm:px-8'>
         <MenuPopOver
           className='grow-0 basis-1/3'
           display='md:hidden'
@@ -19,13 +20,14 @@ export const Header: React.FC = () => {
         />
         <div className='flex shrink-0 grow-0 basis-1/3 justify-center md:justify-start'>
           <Link href='/'>
-            <a className='my-auto flex w-[140px] md:ml-0'>
+            <a className='my-auto flex'>
               <Logo />
             </a>
           </Link>
+
         </div>
 
-        <div className='relative flex basis-1/3 justify-end gap-2'>
+        <div className=' hidden sm:flex relative flex  basis-1/3 justify-center gap-2'>
           <Link href='/services' passHref>
             <Button variant='ghost' as='a'>
               Services
@@ -41,9 +43,7 @@ export const Header: React.FC = () => {
               contact Us
             </Button>
           </Link>
-
-
-          <Link href='/' passHref>
+          <Link href='/blog' passHref>
             <Button as='a' variant='outline' className='hidden md:inline-flex'>
               Blog
             </Button>
@@ -113,7 +113,7 @@ const MenuPopOver = ({ className, display, setShowAuth }: any) => {
             <Dialog.Overlay className='fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-gray-900/80' />
           </Transition.Child>
 
-          <div className='fixed top-0 bottom-0 left-0 w-full max-w-xs rounded-r-xl bg-white p-6 shadow-lg dark:bg-gray-800 '>
+          <div className='md:flex w-full h-full fixed top-0 bottom-0 left-0  max-w-xs rounded-r-xl bg-white p-6 shadow-lg dark:bg-gray-800 '>
             <a className='mx-auto mt-4 flex w-[140px]'>
               <Logo />
             </a>
@@ -122,7 +122,7 @@ const MenuPopOver = ({ className, display, setShowAuth }: any) => {
                 <span className='absolute h-full w-2 bg-indigo-700 opacity-0 transition-all group-hover:opacity-100' />
                 <Link href='/#' passHref>
                   <a className='w-full font-medium transition-all group-hover:pl-3'>
-                    Companies
+                    Services
                   </a>
                 </Link>
               </li>
@@ -130,7 +130,23 @@ const MenuPopOver = ({ className, display, setShowAuth }: any) => {
                 <span className='absolute h-full w-2 bg-indigo-700 opacity-0 transition-all group-hover:opacity-100' />
                 <Link href='/#' passHref>
                   <a className='w-full font-medium transition-all group-hover:pl-3'>
-                    Jobs
+                    About
+                  </a>
+                </Link>
+              </li>
+              <li className='group relative flex h-9 items-center overflow-hidden rounded-md hover:bg-slate-200/50'>
+                <span className='absolute h-full w-2 bg-indigo-700 opacity-0 transition-all group-hover:opacity-100' />
+                <Link href='/#' passHref>
+                  <a className='w-full font-medium transition-all group-hover:pl-3'>
+                    contact Us
+                  </a>
+                </Link>
+              </li>
+              <li className='group relative flex h-9 items-center overflow-hidden rounded-md hover:bg-slate-200/50'>
+                <span className='absolute h-full w-2 bg-indigo-700 opacity-0 transition-all group-hover:opacity-100' />
+                <Link href='/#' passHref>
+                  <a className='w-full font-medium transition-all group-hover:pl-3'>
+                    Blog
                   </a>
                 </Link>
               </li>
@@ -152,7 +168,7 @@ const MenuPopOver = ({ className, display, setShowAuth }: any) => {
               <li>
                 <Link href='/#' passHref>
                   <Button as='a' variant='outline' fullWidth>
-                    For Employers
+                    For Marketers
                   </Button>
                 </Link>
               </li>

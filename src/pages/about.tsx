@@ -1,23 +1,21 @@
 import React from 'react';
-import Hero from '@/components/Hero';
 import { Footer } from '@/components/Footer';
-import { FeaturedJobs } from '@/components/FeaturedJobs';
-import { LatestJobs } from '@/components/LatestJobs';
-import { TopCompanies } from '@/components/TopCompanies';
 import SEO from '@/components/SEO';
+import About_Hero from "@/components/aboutUs/About_Hero";
+import MissionValues from "@/components/aboutUs/Mission & Values";
+import VirtualMobile from "@/components/aboutUs/Mobile_Analystics";
 
 export default function About() {
     return (
         <>
             <SEO />
-            <Hero />
-            {/*<main className='mx-auto max-w-screen-xl px-6 sm:px-8'>*/}
-            {/*    <div className='mt-16 space-y-20'>*/}
-            {/*        <FeaturedJobs />*/}
-            {/*        <LatestJobs />*/}
-            {/*        <TopCompanies />*/}
-            {/*    </div>*/}
-            {/*</main>*/}
+            <About_Hero />
+            <MissionValues/>
+            <main className='mx-auto max-w-screen-xl px-6 sm:px-8'>
+                <div className='mt-16 space-y-20'>
+                    <VirtualMobile/>
+                </div>
+            </main>
             <Footer />
         </>
     );

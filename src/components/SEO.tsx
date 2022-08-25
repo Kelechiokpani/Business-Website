@@ -2,15 +2,16 @@ import React from "react";
 import Head from "next/head";
 
 const defaultMeta = {
-  title: "Job Seeking Landing Page - Miad V",
-  description: "Exprimental Project",
+  title: "Deep technologies Limited",
+  description: "Software development",
 };
 
-const SEO: React.FC<any> = ({ children, ...customMeta }) => {
+const SEO: React.FC<any> = ({ children, ...customMeta}) => {
   const meta = {
     ...defaultMeta,
     ...customMeta,
   };
+
   return (
     <Head>
       <meta name="robots" content="noindex" />
@@ -21,3 +22,6 @@ const SEO: React.FC<any> = ({ children, ...customMeta }) => {
 };
 
 export default SEO;
+
+
+
